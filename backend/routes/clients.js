@@ -63,5 +63,3 @@ router.route('/delete/:id').delete((req, res) => {
 });
 
 module.exports = router;
-
-// "62a261d7a868f9a1e75e9da1"
