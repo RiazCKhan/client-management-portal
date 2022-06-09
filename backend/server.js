@@ -23,7 +23,7 @@ connection.once('open', () => {
 // Routes
 const clientsRouter = require('./routes/clients');
 
-app.use('/clients', clientsRouter)
+app.use('/clients', clientsRouter);
 
 // Start Server
 app.listen(port, () => {
