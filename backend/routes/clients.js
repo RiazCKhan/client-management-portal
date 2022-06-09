@@ -8,16 +8,19 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/add').post((req, res) => {
-  const firstName = req.body.first_name;
-  const lastName = req.body.last_name;
+
+  console.log(req.body)
+
+  const first_name = req.body.firstname;
+  const last_name = req.body.lastname;
 
   const newClient = new Client({
-    firstName,
-    lastName
+    first_name,
+    last_name
   });
 
   newClient.save()
-  .then(() => res.jdon('Client Added!'))
+  .then(() => res.json('Client Added!'))
   .catch((error) => res.status(400).json('Error: ' + error))
 })
 
