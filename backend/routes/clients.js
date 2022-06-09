@@ -8,7 +8,17 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/add').post((req, res) => {
-  console.log('this is the request body', req.body)
+  const firstName = req.body.first_name;
+  const lastName = req.body.last_name;
+
+  const newClient = new Client({
+    firstName,
+    lastName
+  });
+
+  newClient.save()
+  .then(() => res.jdon('Client Added!'))
+  .catch((error) => res.status(400).json('Error: ' + error))
 })
 
 module.exports = router;
