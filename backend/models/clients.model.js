@@ -13,6 +13,7 @@ const clientSchema = new Schema({
     required: true,
     trim: true
   },
+  timestamps: true,
   anger_count: { type: Number },
   relapse_count: { type: Number },
   private_count: { type: Number },
