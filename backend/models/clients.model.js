@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
+const clientSchema = new Schema({
   first_name: {
     type: String,
     required: true,
@@ -24,6 +24,6 @@ const userSchema = new Schema({
   therapist_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Therapist' }
 });
 
-const User = mongoose.model('User', userSchema);
+const Client = mongoose.model('Client', clientSchema);
 
-module.exports = User;
+module.exports = Client;
