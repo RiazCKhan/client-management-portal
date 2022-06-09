@@ -9,7 +9,6 @@ const clientSchema = new Schema({
   relapse_count: { type: Number },
   individual_count: { type: Number },
   complete: { type: Boolean, default: false },
-  court_date: { type: Date },
   therapist_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Therapist' }
 });
 
