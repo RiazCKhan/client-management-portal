@@ -6,3 +6,9 @@ router.route('/').get((req, res) => {
     .then(clients => res.json(clients))
     .catch(error => res.status(400).json('Error: ' + error))
 });
+
+router.route('/add').post((req, res) => {
+  console.log('this is the request body', req.body)
+})
+
+module.exports = router;
