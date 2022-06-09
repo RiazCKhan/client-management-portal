@@ -4,16 +4,13 @@ const Schema = mongoose.Schema;
 
 const sessionSchema = new Schema({
   anger: {
-    type: Array,
-    default: [Date]
+    type: Date,
   },
   relapse: {
-    type: Array,
-    default: [Date]
+    type: Date
   },
   individual: {
-    type: Array,
-    default: [Date]
+    type: Date,
   },
   client_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Client' }
 });
