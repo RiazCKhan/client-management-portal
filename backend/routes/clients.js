@@ -28,7 +28,14 @@ router.route('/add').post((req, res) => {
 })
 
 router.route('/update/:id').put((req, res) => {
-
+  Client.findById(req.params.id)
+    .then((client) => {
+      client.anger_count = req.body.anger_count;
+      client.relapse_count = req.body.relapse_count;
+      client.individual_count = req.body.individual_count;
+      client.complete = req.body.complete;
+    })
+    .catch((error) => res.status(400).json('Error: ' + error));
 });
 
 router.route('/:id').delete((req, res) => {
@@ -36,3 +43,10 @@ router.route('/:id').delete((req, res) => {
 });
 
 module.exports = router;
+
+// first_name: { type: String, required: true, trim: true },
+// last_name: { type: String, required: true, trim: true },
+// anger_count: { type: Number },
+// relapse_count: { type: Number },
+// individual_count: { type: Number },
+// complete: { type: Boolean, default: false },
