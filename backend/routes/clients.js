@@ -1,18 +1,21 @@
 const router = require('express').Router();
 let Client = require('../models/clients.model');
 
+// Retrieve All Clients
 router.route('/').get((req, res) => {
   Client.find()
     .then(clients => res.json(clients))
     .catch(error => res.status(400).json('Error: ' + error))
 });
 
+// Retrieve Single Client
 router.route('/:id').get((req, res) => {
   Client.findById(req.params.id)
     .then(client => res.json(client))
     .catch(error => res.status(400).json('Error: ' + error))
 });
 
+// Create New CLient
 router.route('/add').post((req, res) => {
   const first_name = req.body.firstname;
   const last_name = req.body.lastname;
@@ -27,6 +30,7 @@ router.route('/add').post((req, res) => {
     .catch((error) => res.status(400).json('Error: ' + error))
 })
 
+// Update Client Details
 router.route('/update/:id').put((req, res) => {
   Client.findById(req.params.id)
     .then((client) => {
@@ -38,15 +42,13 @@ router.route('/update/:id').put((req, res) => {
     .catch((error) => res.status(400).json('Error: ' + error));
 });
 
-router.route('/:id').delete((req, res) => {
-
+// Will Remove 'Active Status'
+router.route('/delete/:id').delete((req, res) => {
+  Client.findById(req.params.id)
+    .then((client) => {
+      client.active = req.body.complete;
+    })
+    .catch((error) => res.status(400).json('Error: ' + error));
 });
 
 module.exports = router;
-
-// first_name: { type: String, required: true, trim: true },
-// last_name: { type: String, required: true, trim: true },
-// anger_count: { type: Number },
-// relapse_count: { type: Number },
-// individual_count: { type: Number },
-// complete: { type: Boolean, default: false },
