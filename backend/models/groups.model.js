@@ -4,10 +4,12 @@ const Schema = mongoose.Schema;
 
 const groupSchema = new Schema({
   anger_date: {
-    type: Date
+    type: Array,
+    default: [Date]
   },
   relapse_date: {
-    type: Date
+    type: Array,
+    default: [Date]
   },
   client_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Client' }
 });
