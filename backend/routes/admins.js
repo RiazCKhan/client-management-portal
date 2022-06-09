@@ -22,3 +22,5 @@ router.route('/delete/:id').delete((req, res) => {
     .then(() => res.json('Admin Deleted!'))
     .catch((error) => res.status(400).json('Error: ' + error));
 });
+
+module.exports = router;
