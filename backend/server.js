@@ -24,10 +24,12 @@ connection.once('open', () => {
 const clientsRouter = require('./routes/clients');
 const adminsRouter = require('./routes/admins');
 const therapistsRouter = require('./routes/therapists');
+const sessionsRouter = require('./routes/sessions');
 
 app.use('/clients', clientsRouter);
 app.use('/admins', adminsRouter);
 app.use('/therapists', therapistsRouter);
+app.use('/sessions', sessionsRouter);
 
 // Start Server
 app.listen(port, () => {
