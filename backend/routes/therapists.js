@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let Therapist = require('../models/therapist.model');
+let Therapist = require('../models/therapists.model');
 
 // Create Admin
 router.route('/create').post((req, res) => {
