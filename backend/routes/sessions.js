@@ -2,7 +2,7 @@ const router = require('express').Router();
 let Session = require('../models/sessions.model');
 
 // Create Session
-router.route('/create').post((req, res) => {
+router.route('/add').post((req, res) => {
   const angerManagement = req.body.anger;
   const relapsePrevention = req.body.relapse;
   const individualSession = req.body.individual;

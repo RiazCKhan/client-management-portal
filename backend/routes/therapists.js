@@ -2,7 +2,7 @@ const router = require('express').Router();
 let Therapist = require('../models/therapists.model');
 
 // Create Admin
-router.route('/create').post((req, res) => {
+router.route('/add').post((req, res) => {
   const first_name = req.body.first_name;
   const last_name = req.body.last_name;
 
