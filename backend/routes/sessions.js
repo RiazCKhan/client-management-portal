@@ -3,14 +3,14 @@ let Session = require('../models/sessions.model');
 
 // Create Session
 router.route('/create').post((req, res) => {
-  const anger = req.body.anger;
-  const relapse = req.body.relapse;
-  const individual = req.body.individual;
+  const angerManagement = req.body.anger;
+  const relapsePrevention = req.body.relapse;
+  const individualSession = req.body.individual;
 
   newSession = new Session({
-    anger,
-    relapse,
-    individual
+    angerManagement,
+    relapsePrevention,
+    individualSession
   });
 
   newSession.save()
