@@ -3,13 +3,13 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 const sessionSchema = new Schema({
-  anger: {
+  angerManagement: {
     type: Date,
   },
-  relapse: {
+  relapsePrevention: {
     type: Date
   },
-  individual: {
+  individualSession: {
     type: Date,
   },
   client_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Client' }
