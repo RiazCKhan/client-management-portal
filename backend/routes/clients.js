@@ -17,12 +17,12 @@ router.route('/:id').get((req, res) => {
 
 // Create New CLient
 router.route('/add').post((req, res) => {
-  const first_name = req.body.firstname;
-  const last_name = req.body.lastname;
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
 
   const newClient = new Client({
-    first_name,
-    last_name
+    firstName,
+    lastName
   });
 
   newClient.save()
@@ -33,13 +33,11 @@ router.route('/add').post((req, res) => {
 // Update Client Details
 router.route('/update/:id').patch((req, res) => {
 
-  console.log(req.body);
-
   Client.findById(req.params.id)
     .then((client) => {
-      client.anger_count = req.body.anger_count;
-      client.relapse_count = req.body.relapse_count;
-      client.individual_count = req.body.individual_count;
+      client.angerSessionTotal = req.body.angerCount;
+      client.relapseSessionTotal = req.body.relapseCount;
+      client.individualSessionTotal = req.body.individualCount;
       client.complete = req.body.complete;
 
       client.save()
