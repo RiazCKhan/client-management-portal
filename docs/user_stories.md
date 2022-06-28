@@ -4,10 +4,12 @@
 [4] User can Search/Filter Clients by Name
 [4] User can Search/Filter Clients by Program
 [5] User can Search/Filter by Date of Session
-[6] User will recieve notification of clients near completeion (Read)
+[6] User can add Client Notes
+[7] User will recieve notification of clients near completeion (Read)
 
 What is a Client?
 - Name
 - Counselling Sessions: RP, AM, IND
 - Completion Status
+- Notes?
 
