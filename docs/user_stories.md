@@ -6,5 +6,5 @@
 What is a Client?
 - Name
 - Counselling Sessions: RP, AM, IND
-- Complete?
+- Completion Status
 
