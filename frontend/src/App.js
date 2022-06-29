@@ -1,26 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Home from "./pages/Home";
+import Add from "./pages/Add";
+import Edit from "./pages/Edit";
+import Update from "./pages/Update";
+import Session from "./pages/Session";
+// import Relapse from "./pages/Relapse";
+// import Anger from "./pages/Anger";
+// import Individual from "./pages/Individual";
+import Notifications from "./pages/Notifications";
+import Error from "./pages/Error"
 
 export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} >
+          <Route path='add' element={<Add />} />
+          <Route path='edit' element={<Edit />} />
+          <Route path='update' element={<Update />} />
+          <Route path='session' element={<Session />} />
+          {/* <Route path='relapseprevention' element={<Relapse />} /> */}
+          {/* <Route path='angermanagement' element={<Anger />} /> */}
+          {/* <Route path='individual' element={<Individual />} /> */}
+          <Route path='notifications' element={<Notifications />} />
+          <Route path='error' element={<Error />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
