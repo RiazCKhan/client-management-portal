@@ -6,9 +6,7 @@ export default function SharedLayout() {
   return (
     <>
       <Navbar />
-      <section>
-        <Outlet />
-      </section>
+      <Outlet />
       <Footer />
     </>
   )
