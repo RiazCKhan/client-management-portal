@@ -24,7 +24,7 @@ export default function App() {
           {/* <Route path='angermanagement' element={<Anger />} /> */}
           {/* <Route path='individual' element={<Individual />} /> */}
           <Route path='notifications' element={<Notifications />} />
-          <Route path='error' element={<Error />} />
+          <Route path='*' element={<Error />} />
         </Route>
       </Routes>
     </BrowserRouter>
