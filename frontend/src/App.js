@@ -19,9 +19,9 @@ export default function App() {
         <Route path='/' element={<SharedLayout />} >
           <Route index element={<Home />} />
           <Route path='add' element={<Add />} />
-          <Route path='edit' element={<Edit />} />
-          <Route path='update' element={<Update />} />
-          <Route path='session' element={<Session />} />
+          <Route path='edit/:id' element={<Edit />} />
+          <Route path='update/:id' element={<Update />} />
+          <Route path='session/:id' element={<Session />} />
           {/* <Route path='relapseprevention' element={<Relapse />} /> */}
           {/* <Route path='angermanagement' element={<Anger />} /> */}
           {/* <Route path='individual' element={<Individual />} /> */}
