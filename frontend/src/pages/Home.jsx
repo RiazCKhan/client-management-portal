@@ -6,12 +6,12 @@ import './Home.css';
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <section>
-        <Outlet />
-      </section>
-      <Footer />
-    </>
+    <div className="App">
+      <header className="App-header">
+        <h1 className="text-3xl font-bold underline">
+          HOME
+        </h1>
+      </header>
+    </div>
   )
 }
