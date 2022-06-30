@@ -1,6 +1,6 @@
 import './00.css';
 
-export default function Error() {
+export default function Edit() {
   return (
     <div className="App">
       <header className="App-header">

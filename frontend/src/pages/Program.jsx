@@ -1,11 +1,11 @@
 import './00.css';
 
-export default function Error() {
+export default function Program() {
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="text-3xl font-bold underline">
-          ERROR
+          PROGRAM
         </h1>
       </header>
     </div>
