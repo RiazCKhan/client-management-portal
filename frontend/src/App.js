@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
+import SharedLayout from './components/SharedLayout';
 import Home from "./pages/Home";
 import Add from "./pages/Add";
 import Edit from "./pages/Edit";
@@ -15,7 +16,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />} >
+        <Route path='/' element={<SharedLayout />} >
+          <Route index element={<Home />} />
           <Route path='add' element={<Add />} />
           <Route path='edit' element={<Edit />} />
           <Route path='update' element={<Update />} />
