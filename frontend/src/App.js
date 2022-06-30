@@ -1,30 +1,38 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Home from "./pages/Home";
 import Add from "./pages/Add";
+import Attendance from "./pages/Attendance";
 import Edit from "./pages/Edit";
-import Update from "./pages/Update";
-import Session from "./pages/Session";
-// import Relapse from "./pages/Relapse";
-// import Anger from "./pages/Anger";
-// import Individual from "./pages/Individual";
-import Notifications from "./pages/Notifications";
 import Error from "./pages/Error"
+import Home from "./pages/Home";
+import Notifications from "./pages/Notifications";
+import Program from "./pages/Program";
+
+import SingleClient from './pages/SingleClient';
+import SingleProgram from './pages/SingleProgram';
+import SingleSession from './pages/SingleSession';
+
+import SharedLayout from './components/SharedLayout';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />} >
+        <Route path='/' element={<SharedLayout />} >
+          <Route index element={<Home />} />
           <Route path='add' element={<Add />} />
-          <Route path='edit' element={<Edit />} />
-          <Route path='update' element={<Update />} />
-          <Route path='session' element={<Session />} />
-          {/* <Route path='relapseprevention' element={<Relapse />} /> */}
-          {/* <Route path='angermanagement' element={<Anger />} /> */}
-          {/* <Route path='individual' element={<Individual />} /> */}
+
+          <Route path='edit/' element={<Edit />} />
+          <Route path='edit/:clientId' element={<SingleClient />} />
+
+          <Route path='attendance/' element={<Attendance />} />
+          <Route path='attendance/:sessionId' element={<SingleSession />} />
+
+          <Route path='activeclients/' element={<Program />} />
+          <Route path='activeclients/:programId' element={<SingleProgram />} />
+
           <Route path='notifications' element={<Notifications />} />
-          <Route path='error' element={<Error />} />
+          <Route path='*' element={<Error />} />
         </Route>
       </Routes>
     </BrowserRouter>
