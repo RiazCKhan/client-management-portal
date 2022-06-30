@@ -8,6 +8,10 @@ import Home from "./pages/Home";
 import Notifications from "./pages/Notifications";
 import Program from "./pages/Program";
 
+import SingleClient from './pages/SingleClient';
+import SingleProgram from './pages/SingleProgram';
+import SingleSession from './pages/SingleSession';
+
 import SharedLayout from './components/SharedLayout';
 
 export default function App() {
