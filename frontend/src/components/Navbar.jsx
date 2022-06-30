@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 const navigation = [
   { name: 'Add Client', to: '/add', current: false },
   { name: 'Edit Client', to: '/edit', current: false },
-  { name: 'Attendance', to: '/update', current: false },
-  { name: 'All Clients', to: '/session', current: false }
+  { name: 'Attendance', to: '/attendance', current: false },
+  { name: 'All Clients', to: '/activeclients', current: false }
 ]
 
 function classNames(...classes) {
