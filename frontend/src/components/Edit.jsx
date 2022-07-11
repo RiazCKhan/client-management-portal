@@ -1,11 +1,9 @@
-import './00.css';
-
-export default function Program() {
+export default function Edit() {
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="text-3xl font-bold underline">
-          PROGRAM
+          EDIT
         </h1>
       </header>
     </div>
