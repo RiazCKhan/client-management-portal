@@ -13,19 +13,19 @@ export default function Searchbar() {
         <div className="flex justify-center">
           <ul className="flex  py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
             <li>
-              <button type="button" className="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Relapse</button>
+              <button type="button" className="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white rounded-md">Relapse</button>
             </li>
             <li>
-              <button type="button" className="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Anger</button>
+              <button type="button" className="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white rounded-md">Anger</button>
             </li>
             <li>
-              <button type="button" className="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Private</button>
+              <button type="button" className="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white rounded-md">Private</button>
             </li>
             <li>
-              <button type="button" className="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Active</button>
+              <button type="button" className="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white rounded-md">Active</button>
             </li>
             <li>
-              <button type="button" className="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Complete</button>
+              <button type="button" className="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white rounded-md">Complete</button>
             </li>
           </ul>
         </div>
